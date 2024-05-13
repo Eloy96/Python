@@ -1,0 +1,6 @@
+peso= input("Por favor escribe tu peso en kilogramos ejemplo (17):  ")
+estatura= input("Por favor escribe tu estatura en metros: ")
+peso= float(peso)
+estatura= float(estatura)
+calculo= round(peso / estatura **2,2)
+print(f"Tu imc es: {calculo}")
