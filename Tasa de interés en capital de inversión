@@ -1,0 +1,8 @@
+
+print("Bienvenidos a la calculadora de intereses por inversion")
+
+invertir= float(input("¿Qué cantidad quieres invertir?: "))
+interes= float(input("¿Qué interes te daran por año?: "))
+años= float(input("¿Cuantos años dejaras el dinero invertido? "))
+
+print("Tu rendimiento de inversion al año sera de :" + str(round(invertir * (interes / 100 + 1) ** años, 2)))
