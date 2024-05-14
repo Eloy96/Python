@@ -1,0 +1,8 @@
+barras_vendidas = int(input("Ingresa el numero de barras de pan no fresco que se vendieron en el dia: "))
+coste_barra_fresco = 63.80
+coste_barra_no_fresco = 38.28
+total = float(barras_vendidas * coste_barra_no_fresco)
+
+print(f"Precio normal de pan fresco: $ {coste_barra_fresco}")
+print(f"Precio de pan no fresco '60% de descuento': $ {coste_barra_no_fresco}")
+print(f"El total de la venta del dia es: $ {total}")
