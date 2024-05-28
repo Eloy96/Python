@@ -1,0 +1,34 @@
+print("Bienvenido a la calculadora de horas por semana y paga(semanal)")
+print("Explicación:\n Cada día laboral cuenta con 8 horas laborales y 1 hora de comida\n Si tienes horas extras laboradas por favor ingresa el total de lo contrario coloca 0")
+
+dias_trabajados = int(input("Por favor coloca los días trabajados: "))
+sueldo_mensual = float(input("Por favor ingresa tu salario mensual: "))
+horas_extra = int(input("Por favor ingresa las horas extra: "))
+
+# Validación de horas extra
+while horas_extra < 0:
+    print("Las horas extra no pueden ser negativas. Por favor ingresa un valor válido.")
+    horas_extra = int(input("Por favor ingresa las horas extra: "))
+
+# Días laborables en una semana (según tu empresa)
+dias_laborables = 6
+
+# Cálculo de pago por día (considerando 30 días en un mes)
+pago_dia = sueldo_mensual / 30
+
+# Cálculo de pago por hora
+pago_hora = pago_dia / 9  # 8 horas de trabajo + 1 hora de comida
+
+# Cálculo de pago semanal
+pago_semanal = pago_dia * dias_laborables
+
+# Cálculo de pago de horas extra (mismo valor que el pago por hora normal)
+pago_total_horas_extra = pago_hora * horas_extra
+
+# Cálculo del pago total
+pago_total = pago_semanal + pago_total_horas_extra
+
+print(f"Tu pago semanal + tus horas extras es de: {pago_total}")
+print(f"Tus pagos de horas extra son de: {pago_total_horas_extra}")
+print(f"Tu pago por día es de: {pago_dia}")
+print(f"Tu pago por hora es de: {pago_hora}")
